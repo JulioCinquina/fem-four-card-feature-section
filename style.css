@@ -27,7 +27,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 0.9375rem;
   color: var(--color-paragraphs);
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 img,
@@ -52,6 +52,7 @@ main {
 .intro__subtitle {
   margin-block-start: 0;
   font-size: 24px;
+  line-height: 1.5;
   color: var(--color-titles);
 }
 
