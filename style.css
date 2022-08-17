@@ -68,13 +68,33 @@ main {
 .intro__paragraph {
   line-height: 1.7;
 }
+
+.card-grid {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  width: min(310px, 90%);
+  margin-inline: auto;
+}
+
 .card {
+  outline: 1px solid black;
+  padding-block: 26px;
+  padding-inline: 28px;
   background-color: var(--color-card-background);
 }
 
 .card__title {
+  margin-block-start: 0;
+  margin-block-end: 9px;
+  font-size: 20px;
   color: var(--color-titles);
+  line-height: 1;
   font-weight: 600;
+}
+
+.card__paragraph {
+  margin-block-start: 0;
+  font-size: 13.2px;
 }
 
 .attribution {
