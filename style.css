@@ -46,11 +46,13 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   padding-block-start: 84px;
+  padding-block-end: 48px;
 }
 
 .intro {
-  margin-block-end: 73px;
+  margin-block-end: 58px;
   padding-inline: 20px;
   max-width: 38ch;
   margin-inline: auto;
