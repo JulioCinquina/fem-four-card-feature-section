@@ -160,3 +160,63 @@ main {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media screen and (min-width: 720px) {
+  main {
+    padding-block: 40px;
+  }
+
+  .intro {
+    max-width: 60ch;
+    margin-block-end: 48px;
+  }
+
+  .intro__title,
+  .intro__subtitle {
+    font-size: 36px;
+  }
+
+  .intro__title {
+    line-height: 1.4;
+    margin-block-end: 0;
+  }
+
+  .card-grid {
+    width: min(1110px, 90%);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .card:nth-of-type(1) {
+    grid-column: 1 / 2;
+    grid-row: 2 / span 2;
+  }
+
+  .card:nth-of-type(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+  }
+
+  .card:nth-of-type(3) {
+    grid-column: 2 / 3;
+    grid-row: 3 / span 2;
+  }
+
+  .card:nth-of-type(4) {
+    grid-column: 3 / 4;
+    grid-row: 2 / span 2;
+  }
+
+  .card {
+    padding: 24px;
+    padding-block-end: 12px;
+  }
+
+  .card__title {
+    margin-block-end: 12px;
+  }
+
+  .card__paragraph {
+    margin-block-end: 16px;
+  }
+}
