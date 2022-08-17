@@ -148,7 +148,7 @@ main {
 
 .card__image {
   width: 22%;
-  margin-block: auto;
+  margin-block-start: auto;
   margin-inline-start: auto;
 }
 
