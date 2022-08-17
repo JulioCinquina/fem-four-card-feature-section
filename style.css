@@ -81,6 +81,8 @@ main {
   padding-block-start: 32px;
   padding-block-end: 28px;
   padding-inline: 28px;
+  border-radius: 8px;
+
   background-color: var(--color-card-background);
 
   display: flex;
