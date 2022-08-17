@@ -36,6 +36,9 @@ picture {
   max-width: 100%;
 }
 
+main {
+  padding-block-start: 84px;
+}
 
 .intro {
   margin-block-end: 78px;
