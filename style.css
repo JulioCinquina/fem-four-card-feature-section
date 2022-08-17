@@ -9,6 +9,7 @@
   --color-titles: hsl(234, 12%, 34%);
   --color-paragraphs: hsl(229, 6%, 66%);
   --color-body-background: hsl(0, 0%, 98%);
+  --color-card-background: hsl(0, 0%, 100%);
 }
 
 *,
@@ -20,6 +21,8 @@
 body {
   min-height: 100vh;
   margin: 0;
+
+  background-color: var(--color-body-background);
 
   font-family: "Poppins", sans-serif;
   font-size: 0.9375rem;
@@ -45,6 +48,10 @@ picture {
 .intro__subtitle {
   display: block;
   font-weight: 600;
+}
+
+.card {
+  background-color: var(--color-card-background);
 }
 
 .card__title {
