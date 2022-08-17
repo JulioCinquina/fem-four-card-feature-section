@@ -82,6 +82,9 @@ main {
   padding-block-end: 28px;
   padding-inline: 28px;
   background-color: var(--color-card-background);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .card__title {
@@ -97,6 +100,12 @@ main {
   margin-block-start: 0;
   margin-block-end: 30px;
   font-size: 13.2px;
+}
+
+.card__image {
+  width: 22%;
+  margin-block: auto;
+  margin-inline-start: auto;
 }
 
 .attribution {
