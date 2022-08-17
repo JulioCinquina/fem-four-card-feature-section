@@ -36,8 +36,19 @@ picture {
   max-width: 100%;
 }
 
+
+.intro {
+  margin-block-end: 78px;
+  padding-inline: 20px;
+  max-width: 38ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
 .intro__title,
 .intro__subtitle {
+  margin-block-start: 0;
+  font-size: 24px;
   color: var(--color-titles);
 }
 
@@ -50,6 +61,9 @@ picture {
   font-weight: 600;
 }
 
+.intro__paragraph {
+  line-height: 1.7;
+}
 .card {
   background-color: var(--color-card-background);
 }
