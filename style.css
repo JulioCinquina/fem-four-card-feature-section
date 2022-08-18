@@ -47,13 +47,13 @@ main {
   justify-content: center;
   align-items: center;
 
-  padding-block-start: 84px;
-  padding-block-end: 48px;
+  padding-block-start: 5.25rem;
+  padding-block-end: 3rem;
 }
 
 .intro {
-  margin-block-end: 58px;
-  padding-inline: 20px;
+  margin-block-end: 3.625rem;
+  padding-inline: 1.25rem;
   max-width: 38ch;
   margin-inline: auto;
   text-align: center;
@@ -62,7 +62,7 @@ main {
 .intro__title,
 .intro__subtitle {
   margin-block-start: 0;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.5;
   color: var(--color-titles);
 }
@@ -83,18 +83,18 @@ main {
 .card-grid {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  gap: 26px;
-  width: min(310px, 90%);
+  gap: 1.625rem;
+  width: min(19.375rem, 90%);
   margin-inline: auto;
 }
 
 .card {
   --card-top-edge-color: var(--color-titles);
 
-  padding-block-start: 32px;
-  padding-block-end: 28px;
-  padding-inline: 28px;
-  border-radius: 8px;
+  padding-block-start: 2rem;
+  padding-block-end: 1.75rem;
+  padding-inline: 1.75rem;
+  border-radius: 0.5rem;
 
   position: relative;
   overflow: hidden;
@@ -117,7 +117,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 0.25rem;
   background-color: var(--card-top-edge-color);
 }
 
@@ -139,8 +139,8 @@ main {
 
 .card__title {
   margin-block-start: 0;
-  margin-block-end: 8px;
-  font-size: 20px;
+  margin-block-end: 0.5rem;
+  font-size: 1.25rem;
   color: var(--color-titles);
   line-height: 1;
   font-weight: 600;
@@ -148,8 +148,8 @@ main {
 
 .card__paragraph {
   margin-block-start: 0;
-  margin-block-end: 30px;
-  font-size: 13.2px;
+  margin-block-end: 1.875rem;
+  font-size: 0.825rem;
 }
 
 .card__image {
@@ -159,7 +159,7 @@ main {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--color-titles);
   text-align: center;
 }
@@ -167,19 +167,19 @@ main {
   color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 45em) {
   main {
-    padding-block: 40px;
+    padding-block: 2.5rem;
   }
 
   .intro {
     max-width: 60ch;
-    margin-block-end: 48px;
+    margin-block-end: 3rem;
   }
 
   .intro__title,
   .intro__subtitle {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 
   .intro__title {
@@ -188,9 +188,9 @@ main {
   }
 
   .card-grid {
-    width: min(1110px, 90%);
+    width: min(69.375rem, 90%);
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 1.75rem;
   }
 
   .card:nth-of-type(1) {
@@ -214,27 +214,27 @@ main {
   }
 
   .card {
-    padding: 24px;
-    padding-block-end: 12px;
+    padding: 1.5rem;
+    padding-block-end: 0.75rem;
   }
 
   .card__title {
-    margin-block-end: 12px;
+    margin-block-end: 0.75rem;
   }
 
   .card__paragraph {
-    margin-block-end: 16px;
+    margin-block-end: 1rem;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .card {
-    padding-block: 35px;
+    padding-block: 2.1875rem;
 
-    padding-inline: 32px;
+    padding-inline: 2rem;
   }
 
   .card__paragraph {
-    margin-block-end: 38px;
+    margin-block-end: 2.375rem;
   }
 }
