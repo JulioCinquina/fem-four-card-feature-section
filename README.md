@@ -1,91 +1,110 @@
-# Frontend Mentor - Four card feature section
+# Frontend Mentor - Four card feature section solution
 
-![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+This project features a **responsive layout** made in a **mobile-first workflow** with **Grid** and **media queries**.
 
-Thanks for checking out this front-end coding challenge.
+## Overview
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+### The challenge
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
-
-## The challenge
-
-Your challenge is to build out this feature section and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Links
 
-## Where to find everything
+- [Solution on Frontend Mentor]()
+- [Live Site on GitHub Pages]()
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+### Screenshots
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+|                                Mobile                                 |     |                                 Desktop                                 |
+| :-------------------------------------------------------------------: | :-: | :---------------------------------------------------------------------: |
+| ![Mobile layout of the solution](./screenshots/screenshot-mobile.png) |     | ![Desktop layout of the solution](./screenshots/screenshot-desktop.png) |
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### What I learned
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+In this project, I have practiced the following skills:
 
-## Building your project
+- Using **Grid** and **media queries** to create a **responsive layout**
+- Using **pseudo-elements** for styling purposes
+- Styling elements with **layered box-shadows**
+- Using **semantic HTML markup**
+- Using **Flexbox** to arrange content
+- Improving **accessibility** by ensuring color contrast ratios comply with **WCAG 2.0 level AA**
+- Using **CSS relative units** to ensure the text scales according to the user's font size settings
+- Using **CSS custom properties** to allow easy customization and reusability of the component
+- Using the **BEM naming convention** to create a reusable component
+- Using **Git** and **GitHub**
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+---
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+#### Creating the colored top edge of the cards with a pseudo-element
 
-## Deploying your project
+The colored top edge of the cards was made using an absolutely-positioned `::before` pseudo-element, removing the need to create an empty element in the HTML markup.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+In `.card`, `position: relative` is required to make it the nearest positioned ancestor of the absolutely-positioned `.card::before` pseudo-element. `overflow: hidden` makes the colored strip appear to follow the card's `border-radius` instead of overflowing out of it.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+The color of the strip is defined in the `--card-top-edge-color` custom property, which has a "default" value in the `.card` class. This value is then modified in **modifier classes** — a part of the **BEM naming convention** —, making it easy to create additional cards with different colors, thus improving the **reusability** of the component.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+```css
+.card {
+  --card-top-edge-color: var(--color-titles);
+  /* ... */
+  position: relative;
+  overflow: hidden;
+  /* ... */
+}
 
-## Create a custom `README.md`
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--card-top-edge-color);
+}
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+.card--cyan {
+  --card-top-edge-color: var(--cyan);
+}
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+.card--red {
+  --card-top-edge-color: var(--red);
+}
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+.card--orange {
+  --card-top-edge-color: var(--orange);
+}
 
-## Submitting your solution
+.card--blue {
+  --card-top-edge-color: var(--blue);
+}
+```
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+```html
+<section class="card card--cyan"><!-- ... --></section>
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+<section class="card card--red"><!-- ... --></section>
 
-## Sharing your solution
+<section class="card card--orange"><!-- ... --></section>
 
-There are multiple places you can share your solution:
+<section class="card card--blue"><!-- ... --></section>
+```
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+### Continued development
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+In the future, I want to continue learning how to create **responsive, two-dimensional layouts** with **Grid**. Besides that, I want to continue learning how to create **beautiful shadows** with layered `box-shadow`s and (in future projects) the `drop-shadow()` function.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+### Useful resources
 
-## Got feedback for us?
+- [_Designing Beautiful Shadows in CSS_ by Josh W. Comeau](https://www.joshwcomeau.com/css/designing-shadows/) - This article explains some concepts about shadows in websites and web applications, how to use them correctly and how to design beautiful shadows with CSS.
+- [_Smoother & sharper shadows with layered box-shadows_ by Tobias Ahlin](https://tobiasahlin.com/blog/layered-smooth-box-shadows/) - This article (which was mentioned in the previous one) contains several examples of layered CSS box-shadows.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+## Author
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+- Frontend Mentor - [@JulioCinquina](https://www.frontendmentor.io/profile/JulioCinquina)
