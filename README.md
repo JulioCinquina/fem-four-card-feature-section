@@ -14,8 +14,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution on Frontend Mentor]()
-- [Live Site on GitHub Pages]()
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-cards-with-grid-pseudoelements-bem-and-accessible-colors-ZYQwAtR6NA)
+- [Live Site on GitHub Pages](https://juliocinquina.github.io/fem-four-card-feature-section/)
 
 ### Screenshots
 
